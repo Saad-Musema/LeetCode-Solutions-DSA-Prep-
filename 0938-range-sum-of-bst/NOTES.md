@@ -1,0 +1,1 @@
+Inorder Traversal is possible too, but this one is a bit more efficient. Both Time and Space Complexity is O(n).
