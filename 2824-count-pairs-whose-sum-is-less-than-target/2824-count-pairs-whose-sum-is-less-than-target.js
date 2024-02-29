@@ -6,19 +6,19 @@
 var countPairs = function(nums, target) {
     nums.sort((a, b) => a - b);
     var left = 0;
-    var right = 1;
+    var right = nums.length - 1;
     
     let count = 0;
     
-    while(left<nums.length){
+    while(left<right){
         if(nums[left] + nums[right] < target){
-            count++;
-            right++;
-            continue;
+            count += right -left;
+            left++;
         }
         
-        left++;
-        right = left +1;
+        else{
+            right--;
+        }
     }
     
     return count;
